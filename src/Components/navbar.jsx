@@ -3,6 +3,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Image from "react-bootstrap/Image";
+import React, { useState } from "react";
 
 // personal
 
@@ -10,11 +11,19 @@ import white_logo from "./images/White_AISC.png";
 import color_logo from "./images/Color_AISC.png";
 
 function NavbarAI() {
+  const [logoSrc, setLogoSrc] = useState(white_logo);
+
   return (
     <Navbar collapseOnSelect expand="lg" variant="dark" className="custom-nav">
       <Container>
         <Navbar.Brand href="#home" className="nav-item">
-          <Image src={white_logo} className="img-nav" fluid></Image>
+          <Image
+            src={logoSrc}
+            className="img-nav"
+            fluid
+            onMouseOver={() => setLogoSrc(color_logo)}
+            onMouseOut={() => setLogoSrc(white_logo)}
+          />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
