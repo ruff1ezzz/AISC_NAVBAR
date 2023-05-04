@@ -9,12 +9,6 @@ import Image from "react-bootstrap/Image";
 import white_logo from "./images/White_AISC.png";
 import color_logo from "./images/Color_AISC.png";
 
-const lightUp = {
-    
-}
-
-
-
 function NavbarAI() {
   return (
     <Navbar collapseOnSelect expand="lg" variant="dark" className="custom-nav">
