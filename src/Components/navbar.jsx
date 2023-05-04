@@ -2,18 +2,19 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
+import Image from "react-bootstrap/Image";
+
+// personal
+
+import white_logo from "./images/White_AISC.png";
+import color_logo from "./images/Color_AISC.png";
 
 function NavbarAI() {
   return (
     <Navbar collapseOnSelect expand="lg" variant="dark" className="custom-nav">
       <Container>
         <Navbar.Brand href="#home" className="nav-item">
-          {" "}
-          <img
-            src="./images/White_AISC.png"
-            className="img-nav d-inline-block align-top"
-            alt="AISC White Logo"
-          />{" "}
+          <Image src={white_logo} className="img-nav" fluid></Image>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
