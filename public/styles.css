@@ -1,11 +1,10 @@
 .main-screen {
-  background-color: black;
+  background: black;
 }
 
 /* Navbar */
 .custom-nav {
   font-family: "Bai Jamjuree", sans-serif;
-  color: white;
 }
 
 .nav-item {
@@ -19,4 +18,43 @@
   left: 0px;
   top: 0px;
   border-radius: [object Object]px;
+}
+
+.navbar-nav .nav-link.dropdown-toggle::after {
+  display: none;
+}
+
+
+.custom-dropdown .dropdown-menu {
+  background-color: rgba(255,255,255,0.9);
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  animation-name: fade-in;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  width: 100vw;
+  left: 0;
+  right: 0;
+}
+
+
+
+.custom-dropdown .dropdown-item {
+  color: #000;
+}
+
+.custom-dropdown .dropdown-item:hover {
+  background-color: rgba(255,255,255,0.5);
+  width: 100%;
+  color: #000;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

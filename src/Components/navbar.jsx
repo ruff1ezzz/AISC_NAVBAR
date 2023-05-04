@@ -10,14 +10,16 @@ import React, { useState } from 'react';
 import white_logo from "./images/White_AISC.png";
 import color_logo from "./images/Color_AISC.png";
 
-const lightUp = {
-    
-}
-
-
 function NavbarAI() {
 
   const [logoSrc, setLogoSrc] = useState(white_logo);
+  const [showAboutDropdown, setShowAboutDropdown] = useState(false);
+  const [showInitiativesDropdown, setShowInitiativesDropdown] = useState(false);
+
+  const handleAboutDropdownEnter = () => setShowAboutDropdown(true);
+  const handleAboutDropdownLeave = () => setShowAboutDropdown(false);
+  const handleInitiativesDropdownEnter = () => setShowInitiativesDropdown(true);
+  const handleInitiativesDropdownLeave = () => setShowInitiativesDropdown(false);
 
   return (
     <Navbar collapseOnSelect expand="lg" variant="dark" className="custom-nav">
@@ -28,15 +30,34 @@ function NavbarAI() {
             onMouseOut={() => setLogoSrc(white_logo)}
           />
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
+            
             {/* This is the dropdown */}
-            <NavDropdown title="ABOUT" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Our Mission</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Our Team</NavDropdown.Item>
+            
+            <NavDropdown 
+              title="ABOUT" 
+              id="collasible-nav-dropdown"
+              className="custom-dropdown"
+              show={showAboutDropdown}
+              onMouseEnter={handleAboutDropdownEnter}
+              onMouseLeave={handleAboutDropdownLeave}>
+
+              <NavDropdown.Item href="#action/3.1" className="custom-dropdown-item">Our Mission</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2" className="custom-dropdown-item">Our Team</NavDropdown.Item>
+              
             </NavDropdown>
-            <NavDropdown title="INIATIVES" id="collasible-nav-dropdown">
+
+            <NavDropdown 
+              title="INIATIVES" 
+              id="collasible-nav-dropdown"
+              className="custom-dropdown"
+              show={showInitiativesDropdown}
+              onMouseEnter={handleInitiativesDropdownEnter}
+              onMouseLeave={handleInitiativesDropdownLeave}>
+
+              <NavDropdown.Item>LOCAL @ UCSD</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
                 Another action
@@ -46,6 +67,7 @@ function NavbarAI() {
               <NavDropdown.Item href="#action/3.4">
                 Separated link
               </NavDropdown.Item>
+              
             </NavDropdown>
             {/* This are the other normal links */}
             <Nav.Link href="#events">EVENTS</Nav.Link>
