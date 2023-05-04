@@ -5,9 +5,22 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 
 function NavbarAI() {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+    <Navbar
+      collapseOnSelect
+      expand="lg"
+      bg="dark"
+      variant="dark"
+      className="custom-nav"
+    >
       <Container>
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+        <Navbar.Brand href="#home">
+          {" "}
+          <img
+            src="./images/White_AISC.png"
+            className="d-inline-block align-top"
+            alt="AISC White Logo"
+          />{" "}
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
@@ -35,13 +48,12 @@ function NavbarAI() {
               </NavDropdown.Item>
             </NavDropdown>
             {/* This are the other normal links */}
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
+            <Nav.Link href="#events">EVENTS</Nav.Link>
+            <Nav.Link href="#hfai">HFAI</Nav.Link>
           </Nav>
           <Nav>
-            <Nav.Link href="#deets">More deets</Nav.Link>
             <Nav.Link eventKey={2} href="#memes">
-              Dank memes
+              GET INVOLVED
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
