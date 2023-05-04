@@ -5,19 +5,13 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 
 function NavbarAI() {
   return (
-    <Navbar
-      collapseOnSelect
-      expand="lg"
-      bg="dark"
-      variant="dark"
-      className="custom-nav"
-    >
+    <Navbar collapseOnSelect expand="lg" variant="dark" className="custom-nav">
       <Container>
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="#home" className="nav-item">
           {" "}
           <img
             src="./images/White_AISC.png"
-            className="d-inline-block align-top"
+            className="img-nav d-inline-block align-top"
             alt="AISC White Logo"
           />{" "}
         </Navbar.Brand>

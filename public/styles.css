@@ -1,3 +1,22 @@
+.main-screen {
+  background-color: black;
+}
+
+/* Navbar */
 .custom-nav {
   font-family: "Bai Jamjuree", sans-serif;
+  color: white;
+}
+
+.nav-item {
+  padding: 0 -50px;
+}
+
+.img-nav {
+  background: url("./images/White_AISC.png") no-repeat;
+  display: inline-block;
+}
+
+.img-nav:hover {
+  background: url("./images/Color_AISC.png") no-repeat;
 }

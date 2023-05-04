@@ -4,7 +4,7 @@ import NavbarAI from './navbar';
 
 function App() {
   return (
-      <div>
+      <div className='main-screen'>
         <NavbarAI></NavbarAI>
           <h1>fwefwe</h1>
     </div>
