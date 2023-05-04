@@ -13,15 +13,10 @@
 }
 
 .img-nav {
-  background: url("./images/White_AISC.png") no-repeat;
   display: inline-block;
   height: 66px;
   width: 66.73161315917969px;
   left: 0px;
   top: 0px;
   border-radius: [object Object]px;
-}
-
-.img-nav:hover {
-  background: url("./images/Color_AISC.png") no-repeat;
 }
