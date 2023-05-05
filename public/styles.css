@@ -5,6 +5,15 @@
 /* Navbar */
 .custom-nav {
   font-family: "Bai Jamjuree", sans-serif;
+  position: relative;
+  z-index: 1;
+}
+
+.custom-nav .nav-link {
+  color: #ffffff;
+  padding: 15px;
+  font-size: 18px;
+  text-transform: uppercase;
 }
 
 .nav-item {
@@ -25,8 +34,9 @@
 }
 
 
+
 .custom-dropdown .dropdown-menu {
-  background-color: rgba(255,255,255,0.9);
+  background-color: #000;
   border: none;
   border-radius: 0;
   box-shadow: none;
@@ -39,15 +49,13 @@
 }
 
 
-
 .custom-dropdown .dropdown-item {
-  color: #000;
+  color: white;
 }
 
 .custom-dropdown .dropdown-item:hover {
-  background-color: rgba(255,255,255,0.5);
-  width: 100%;
-  color: #000;
+  background-color: transparent;
+  color: purple;
 }
 
 @keyframes fade-in {

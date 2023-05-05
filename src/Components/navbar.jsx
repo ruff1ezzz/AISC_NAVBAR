@@ -15,11 +15,15 @@ function NavbarAI() {
   const [logoSrc, setLogoSrc] = useState(white_logo);
   const [showAboutDropdown, setShowAboutDropdown] = useState(false);
   const [showInitiativesDropdown, setShowInitiativesDropdown] = useState(false);
+  const [showSubNavDropdown, setShowSubNavDropdown] = useState(false);
 
   const handleAboutDropdownEnter = () => setShowAboutDropdown(true);
   const handleAboutDropdownLeave = () => setShowAboutDropdown(false);
   const handleInitiativesDropdownEnter = () => setShowInitiativesDropdown(true);
   const handleInitiativesDropdownLeave = () => setShowInitiativesDropdown(false);
+  const handleSubNavDropdownEnter = () => setShowSubNavDropdown(true);
+  const handleSubNavDropdownLeave = () => setShowSubNavDropdown(false);
+  // when we minimize or expand the screen make sure to implement display flex
 
   return (
     <Navbar collapseOnSelect expand="lg" variant="dark" className="custom-nav">
@@ -39,7 +43,7 @@ function NavbarAI() {
             <NavDropdown 
               title="ABOUT" 
               id="collasible-nav-dropdown"
-              className="custom-dropdown"
+              className="custom-dropdown subnav-dropdown"
               show={showAboutDropdown}
               onMouseEnter={handleAboutDropdownEnter}
               onMouseLeave={handleAboutDropdownLeave}>
@@ -52,7 +56,7 @@ function NavbarAI() {
             <NavDropdown 
               title="INIATIVES" 
               id="collasible-nav-dropdown"
-              className="custom-dropdown"
+              className="custom-dropdown subnav-dropdown"
               show={showInitiativesDropdown}
               onMouseEnter={handleInitiativesDropdownEnter}
               onMouseLeave={handleInitiativesDropdownLeave}>
